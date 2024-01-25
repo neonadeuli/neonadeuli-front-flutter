@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:neonadeuli_front_flutter/pages/post_detail_page.dart';
 
@@ -25,14 +26,27 @@ class Post extends StatelessWidget {
         const SizedBox(
           height: 10,
         ),
-        Container(
-          width: double.infinity,
-          color: Colors.grey.withOpacity(0.1),
-          child: Image.network(
-            "https://media.discordapp.net/attachments/1193853621197086765/1199293754054545428/KakaoTalk_20240123_185826476_03.jpg?ex=65c20458&is=65af8f58&hm=420059aefd877e9b98ef885aaee012abd587eded6805e01d6c49cb33e133a02d&=&format=webp&width=514&height=686",
-            height: 300,
-            fit: BoxFit.contain,
+        CarouselSlider(
+          options: CarouselOptions(
+            height: 400,
+            enableInfiniteScroll: false,
+            enlargeCenterPage: true,
           ),
+          items: [1, 2, 3, 4, 5].map((i) {
+            return Builder(
+              builder: (BuildContext context) {
+                return Container(
+                  width: MediaQuery.of(context).size.width,
+                  margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                  child: Image.network(
+                    "https://media.discordapp.net/attachments/1193853621197086765/1199293754054545428/KakaoTalk_20240123_185826476_03.jpg?ex=65c20458&is=65af8f58&hm=420059aefd877e9b98ef885aaee012abd587eded6805e01d6c49cb33e133a02d&=&format=webp&width=514&height=686",
+                    height: 300,
+                    fit: BoxFit.contain,
+                  ),
+                );
+              },
+            );
+          }).toList(),
         ),
         Row(
           children: [
