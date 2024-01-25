@@ -28,23 +28,25 @@ class Post extends StatelessWidget {
         ),
         CarouselSlider(
           options: CarouselOptions(
-            height: 400,
+            height: 300,
             enableInfiniteScroll: false,
             enlargeCenterPage: true,
+            viewportFraction: 0.8,
           ),
           items: [1, 2, 3, 4, 5].map((i) {
-            return Builder(
-              builder: (BuildContext context) {
-                return Container(
-                  width: MediaQuery.of(context).size.width,
-                  margin: const EdgeInsets.symmetric(horizontal: 5.0),
-                  child: Image.network(
-                    "https://media.discordapp.net/attachments/1193853621197086765/1199293754054545428/KakaoTalk_20240123_185826476_03.jpg?ex=65c20458&is=65af8f58&hm=420059aefd877e9b98ef885aaee012abd587eded6805e01d6c49cb33e133a02d&=&format=webp&width=514&height=686",
-                    height: 300,
-                    fit: BoxFit.contain,
-                  ),
-                );
-              },
+            return ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Builder(
+                builder: (BuildContext context) {
+                  return SizedBox(
+                    width: MediaQuery.of(context).size.width,
+                    child: Image.network(
+                      "https://media.discordapp.net/attachments/1193853621197086765/1199293754054545428/KakaoTalk_20240123_185826476_03.jpg?ex=65c20458&is=65af8f58&hm=420059aefd877e9b98ef885aaee012abd587eded6805e01d6c49cb33e133a02d&=&format=webp&width=514&height=686",
+                      fit: BoxFit.cover,
+                    ),
+                  );
+                },
+              ),
             );
           }).toList(),
         ),
