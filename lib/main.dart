@@ -4,8 +4,6 @@ import 'package:neonadeuli_front_flutter/pages/feed_page.dart';
 import 'package:neonadeuli_front_flutter/pages/map_page.dart';
 import 'package:neonadeuli_front_flutter/pages/write_page.dart';
 
-/// Flutter code sample for [BottomNavigationBar].
-
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
