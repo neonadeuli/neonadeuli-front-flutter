@@ -807,3 +807,12 @@ doc/api/
 .flutter-plugins
 .flutter-plugins-dependencies
 
+# iOS and macOS build settings
+ios/Podfile
+macos/Podfile
+ios/Flutter/Debug.xcconfig
+ios/Flutter/Release.xcconfig
+ios/Runner.xcodeproj/project.pbxproj
+ios/Runner.xcworkspace/contents.xcworkspacedata
+macos/Flutter/Flutter-Debug.xcconfig
+macos/Flutter/Flutter-Release.xcconfig
