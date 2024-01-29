@@ -45,5 +45,7 @@
 	<true/>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>NSLocationWhenInUseUsageDescription</key>
+    <string>This app requires the Location permission to fetch posts from other users based on user location.</string>
 </dict>
 </plist>
