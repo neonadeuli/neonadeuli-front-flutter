@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:neonadeuli_front_flutter/services/current_loaction_status.dart';
+import 'package:neonadeuli_front_flutter/services/current_location_status.dart';
 
 class MapPage extends StatelessWidget {
   const MapPage({super.key});
