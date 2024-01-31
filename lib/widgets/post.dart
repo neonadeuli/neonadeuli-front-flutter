@@ -1,6 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:neonadeuli_front_flutter/pages/post_detail_page.dart';
+import 'package:neonadeuli_front_flutter/pages/main/post/detail/post_detail_page.dart';
 
 class Post extends StatelessWidget {
   final int postId;
